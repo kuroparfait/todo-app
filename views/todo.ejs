@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <title>todo</title>
+    <link href="style.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-title">
+        <h1>ToDo Application</h1>
+    </div>
+
+    <div class="todo-list">
+        <div class="container">
+            <p>あなたのToDo</p>
+
+            
+            <ul class="table-body">
+                <% todocolumn.forEach((todo) => { %>
+                    <li>
+                        <div class="todo-data">
+                            <span class="title-column"><%= todo.title%></span>
+                            <span class="month-column"><%= todo.month%></span>
+                            <p>/</p>
+                            <span class="day-column"><%= todo.day%></span>    
+                        </div>
+                    </li>
+                <%});%>
+                
+            </ul>
+
+            <a href="/req" class="linkreq">ToDoを追加</a>
+
+        </div>
+    </div>
+
+    
+</body>
+
+</html>

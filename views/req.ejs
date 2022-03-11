@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <title>todo_req</title>
+    <link href="style.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="todo-request">
+        <div class="container">
+            <p>ToDoを追加</p>
+            <div class="input-form">
+                <form action="/create" method="post">
+                    <div class="title-form">
+                        <label for="todoTitle">内容</label>
+                        <input name="todoTitle" id="todoTitle">
+                    </div>
+
+                    <div class="date-form">
+                        <div class="month">
+                            <label for="todoMonth">月</label>
+                            <input name="todoMonth" id="todoMonth"> 
+                        </div>
+                        <div class="day">
+                            <label for="todoDay">日</label>
+                            <input name="todoDay" id="todoDay">
+                        </div>
+                    </div>
+                    <a href="/todo" class="new-button">登録</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>

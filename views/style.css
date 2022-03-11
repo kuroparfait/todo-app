@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+.title-form {
+    float: left;
+}
+
+.date-form {
+    
+    margin-left: 30px;
+}
+
+.date-form input {
+    width: 20px;
+}
+
+.month {
+    float: left;
+}
+.month p {
+    float: right;
+}
+.day {
+    float: left;
+}
+.day p{
+    float: right;
+}
