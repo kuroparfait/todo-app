@@ -51,7 +51,7 @@ app.post('/create',(req,res) => {
     const da = req.body.todoDay;
     connection.query(
         'INSERT INTO todo_table(title,month,day) VALUES (?,?,?)',
-        ti,mo,da);
+        [ti,mo,da]);
     
     res.redirect('/todo');
 });
