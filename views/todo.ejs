@@ -17,21 +17,22 @@
             <p>あなたのToDo</p>
 
             
-            <ul class="table-body">
-                <% todocolumn.forEach((todo) => { %>
-                    <li>
-                        <div class="todo-data">
-                            <span class="title-column"><%= todo.title%></span>
-                            <span class="month-column"><%= todo.month%></span>
-                            <p>/</p>
-                            <span class="day-column"><%= todo.day%></span>    
+            <div class="table-wrapper">
+                <table class="todoTable">
+                    <% todocolumn.forEach((todo) => { %>
+                        <div class="box" id="makeImg">
                         </div>
-                    </li>
-                <%});%>
-                
-            </ul>
-
+                        <tr>
+                            <!--<div class="todo-data">-->
+                                <td><span class="month-column"><%= todo.month%></span>/<span class="day-column"><%= todo.day%></span></td>   
+                                <td><span class="title-column"><%= todo.title%></span></td>
+                            <!--</div>-->
+                        </tr>
+                    <%});%>
+                </table>
+            </div>
             <a href="/req" class="linkreq">ToDoを追加</a>
+
 
         </div>
     </div>
