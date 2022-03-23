@@ -4,38 +4,48 @@
 <head>
     <meta http-equiv="content-type" content="text/html" charset="utf-8">
     <title>todo</title>
-    <link href="style.css" rel="stylesheet" media="all">
+    <link href="/public/css/style.css" rel="stylesheet" media="all">
 </head>
 
 <body>
     <div class="page-title">
-        <h1>ToDo Application</h1>
-    </div>
-
-    <div class="todo-list">
         <div class="container">
-            <p>あなたのToDo</p>
-
-            
-            <div class="table-wrapper">
-                <table class="todoTable">
-                    <% todocolumn.forEach((todo) => { %>
-                        <div class="box" id="makeImg">
-                        </div>
-                        <tr>
-                            <!--<div class="todo-data">-->
-                                <td><span class="month-column"><%= todo.month%></span>/<span class="day-column"><%= todo.day%></span></td>   
-                                <td><span class="title-column"><%= todo.title%></span></td>
-                            <!--</div>-->
-                        </tr>
-                    <%});%>
-                </table>
-            </div>
-            <a href="/req" class="linkreq">ToDoを追加</a>
-
-
+           <h1>ToDo Application</h1>
         </div>
     </div>
+
+    <div class="main">
+
+        <div class="todo-list">
+            <div class="container">
+                <p>あなたのToDo</p>
+    
+                
+                <div class="table-wrapper">
+                    <div class="table-head">
+                        <span class="date-column">日付</span>
+                        <span>内容</span>
+                    </div>
+                    <ul class="table-body">
+                        <% todocolumn.forEach((todo) => { %>
+                            <li>
+                                <div class="todo-data">
+                                    <span class="month-column"><%= todo.month%></span>/<span class="day-column"><%= todo.day%></span>   
+                                    <span class="title-column"><%= todo.title%></span>
+                                </div>
+                            </li>
+                        <%});%>
+                    </ul>
+                </div>
+                <a href="/req" class="linkreq">ToDoを追加</a>
+    
+    
+            </div>
+        </div>
+    
+
+    </div>
+
 
     
 </body>
