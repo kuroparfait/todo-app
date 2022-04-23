@@ -1,15 +1,15 @@
 const express = require('express');
 const ejs = require('ejs');
-const fs= require('fs');
+//const fs = require('fs');//
+const path =require('path');
 const app = express();
 const mysql = require('mysql2');
-const res = require('express/lib/response');
-const req = require('express/lib/request');
+//const res = require('express/lib/response');//
+//const req = require('express/lib/request');//
 
-app.listen(3000);
-console.log('Server Start!');
 
-app.use(express.static('public'));
+app.use(express.static(//path.join(__dirname,
+'public'));//);
 app.use(express.urlencoded({extended: false}));
 
 const connection = mysql.createConnection({
@@ -26,6 +26,9 @@ connection.connect((err) => {
     }
     console.log('success');
 });
+
+app.listen(3000);
+console.log('Server Start!');
 
 app.get('/todo',(req,res) => {
     connection.query(
